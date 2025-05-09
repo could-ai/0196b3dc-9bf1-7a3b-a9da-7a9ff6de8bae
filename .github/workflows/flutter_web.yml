@@ -27,6 +27,10 @@ jobs:
           flutter-version: '3.29.2' # Specify Flutter version
           channel: 'stable'           # Specify Flutter channel
 
+      - name: Clean Flutter build cache
+        working-directory: ./usr
+        run: flutter clean
+
       - name: Get dependencies
         working-directory: ./usr # Specifies working directory for Flutter commands
         run: flutter pub get      # Gets Flutter dependencies
